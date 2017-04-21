@@ -1,0 +1,27 @@
+{
+  "name": "decision-table-app",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "eslint": "^3.19.0",
+    "eslint-plugin-babel": "^4.1.1",
+    "prop-types": "^15.5.8",
+    "react": "^15.5.4",
+    "react-bootstrap": "^0.30.9",
+    "react-dom": "^15.5.4",
+    "react-router-bootstrap": "^0.24.2",
+    "react-router-dom": "^4.1.1"
+  },
+  "devDependencies": {
+    "js-beautify": "^1.6.12",
+    "react-scripts": "0.9.5"
+  },
+  "scripts": {
+    "src_lint": "eslint src tests",
+    "src_format": "js-beautify -r -X -f `ls src/*.js src/components/*.js tests/*.js`",
+    "start": "react-scripts start",
+    "build": "npm run src_format && react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  }
+}
