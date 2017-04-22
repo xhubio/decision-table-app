@@ -19,7 +19,7 @@ import PropTypes from 'prop-types'
 
 
 const itemPropType = {
-  key: PropTypes.number.isRequired,
+  key: PropTypes.string,
   name: PropTypes.string.isRequired,
   link: PropTypes.string.isRequired
 }
@@ -34,24 +34,6 @@ class Navigation extends Component {
       React.PropTypes.shape(itemPropType)
     )
   }
-
-  // static propTypes = {
-  //   children: PropTypes.element.isRequired,
-  //   onClick: PropTypes.func,
-  //   replace: PropTypes.bool,
-  //   to: PropTypes.oneOfType([
-  //     PropTypes.string,
-  //     PropTypes.object,
-  //   ]).isRequired,
-  //   exact: PropTypes.bool,
-  //   strict: PropTypes.bool,
-  //   className: PropTypes.string,
-  //   activeClassName: PropTypes.string,
-  //   style: PropTypes.object,
-  //   activeStyle: PropTypes.object,
-  //   isActive: PropTypes.func,
-  // };
-
 
   render() {
     return (
@@ -77,14 +59,14 @@ function createNavbar(props) {
   if (props.left) {
     items.push(
       <Nav>
-        {createNavContent(props.left)}
+        {createNavbarContent(props.left)}
       </Nav>
     )
   }
   if (props.right) {
     items.push(
       <Nav pullRight>
-        {createNavContent(props.right)}
+        {createNavbarContent(props.right)}
       </Nav>
     )
   }
@@ -92,7 +74,7 @@ function createNavbar(props) {
   return items
 }
 
-function createNavContent(props) {
+function createNavbarContent(props) {
   const items = []
   props.forEach(item => {
     let eventKey = item.name
@@ -102,7 +84,7 @@ function createNavContent(props) {
 
     items.push(
       <LinkContainer to={item.link}>
-				<NavItem eventKey={{eventKey}} >{item.name}</NavItem>
+				<NavItem eventKey={{eventKey}}>{item.name}</NavItem>
 			</LinkContainer>
     )
   })
