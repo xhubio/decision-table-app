@@ -1,7 +1,6 @@
 import React, {
   Component
 } from 'react'
-import logo from './logo.svg'
 import Navigation from './components/Navigation'
 
 import Home from './pages/Home'
@@ -10,8 +9,10 @@ import Pricing from './pages/Pricing'
 
 import {
   BrowserRouter as Router,
-  Route
+  Route,
+  Link
 } from 'react-router-dom'
+
 
 const navData = {
   left: [
@@ -44,23 +45,24 @@ const navData = {
 class App extends Component {
   render() {
     return (
-      <div>
+
         <Router>
           <div>
-          <div>
-            <Navigation left={navData.left} right={navData.right}/>
-          </div>
 
-          <div>
-            <Route exact path="/" component={Home}/>
-            <Route exact path="/home" component={Home}/>
-            <Route exact path="/features" component={Features}/>
-            <Route exact path="/pricing" component={Pricing}/>
-          </div>
+            <div>
+              <Navigation left={navData.left} right={navData.right}/>
+            </div>
+
+            <div>
+              <Route exact path="/" component={Home}/>
+              <Route  path="/home" component={Home}/>
+              <Route  path="/features" component={Features}/>
+              <Route  path="/pricing" component={Pricing}/>
+            </div>
 
           </div>
         </Router>
-      </div>
+
     )
   }
 }

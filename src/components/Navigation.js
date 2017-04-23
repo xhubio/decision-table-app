@@ -2,9 +2,6 @@ import React, {
   Component
 } from 'react'
 import {
-  BrowserRouter as Router
-} from 'react-router-dom'
-import {
   Navbar,
   Nav,
   NavItem
@@ -37,7 +34,6 @@ class Navigation extends Component {
 
   render() {
     return (
-      <Router>
 				<Navbar inverse collapseOnSelect>
 					<Navbar.Header>
             <Navbar.Toggle/>
@@ -49,7 +45,6 @@ class Navigation extends Component {
 						</Nav>
 					</Navbar.Collapse>
 				</Navbar>
-			</Router>
     )
   }
 }
