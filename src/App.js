@@ -3,9 +3,9 @@ import React, {
 } from 'react'
 import Navigation from './components/Navigation'
 
-import Home from './pages/Home'
-import Features from './pages/Features'
-import Pricing from './pages/Pricing'
+import Home from './pages/public/Home'
+import Features from './pages/public/Features'
+import Pricing from './pages/public/Pricing'
 
 import {
   BrowserRouter as Router,
