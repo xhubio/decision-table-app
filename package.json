@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "eslint": "^4.7.2",
+    "eslint": "^5.15.0",
     "eslint-plugin-babel": "^5.1.0",
     "prop-types": "^15.5.8",
     "react": "^16.0.0",
