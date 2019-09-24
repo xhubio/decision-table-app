@@ -10,7 +10,7 @@
     "react-bootstrap": "^0.31.3",
     "react-dom": "^16.0.0",
     "react-router-bootstrap": "^0.24.2",
-    "react-router-dom": "^4.1.1"
+    "react-router-dom": "^5.1.0"
   },
   "devDependencies": {
     "js-beautify": "^1.6.12",
